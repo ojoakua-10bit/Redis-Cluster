@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "512"
     end
 
-    redis_node_1.vm.provision "shell", path: "provision/redis_1.sh", privileged: false
+    redis_node_1.vm.provision "shell", path: "provision/redis_master.sh", privileged: false
   end
 
   config.vm.define "redis_node_2" do |redis_node_2|
