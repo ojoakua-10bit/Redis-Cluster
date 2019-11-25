@@ -80,12 +80,13 @@ define( 'WP_DEBUG', false );
 
 
 define( 'WP_REDIS_CLIENT', 'predis' );
-define( 'WP_REDIS_SENTINEL', 'mymaster' );
-define( 'WP_REDIS_SERVERS', [
-    'tcp://192.168.16.71:6379',
-    'tcp://192.168.16.72:6379',
-    'tcp://192.168.16.73:6379',
-] );
+define( 'WP_REDIS_HOST', '192.168.16.71' );
+#define( 'WP_REDIS_SENTINEL', 'mymaster' );
+#define( 'WP_REDIS_SERVERS', [
+#    'tcp://192.168.16.71:6379',
+#    'tcp://192.168.16.72:6379',
+#    'tcp://192.168.16.73:6379',
+#] );
 
 /* That's all, stop editing! Happy publishing. */
 

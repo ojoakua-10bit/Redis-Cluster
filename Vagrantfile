@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "512"
     end
 
-    hosting_redis.vm.provision "shell", path: "provision/hosting_noredis.sh", privileged: false
+    hosting_redis.vm.provision "shell", path: "provision/hosting_redis.sh", privileged: false
   end
 
   config.vm.define "hosting_noredis" do |hosting_noredis|
@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "512"
     end
 
-    hosting_noredis.vm.provision "shell", path: "provision/hosting_redis.sh", privileged: false
+    hosting_noredis.vm.provision "shell", path: "provision/hosting_noredis.sh", privileged: false
   end
 
 end

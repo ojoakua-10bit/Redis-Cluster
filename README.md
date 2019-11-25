@@ -11,13 +11,16 @@ NRP: 05111640000069
   - [Table of Content](#table-of-content)
   - [Configuration and Architechture](#configuration-and-architechture)
     - [Redis Cluster](#redis-cluster)
+    - [Web Server](#web-server)
+  - [Load Testing](#load-testing)
+  - [Failover Testing](#failover-testing)
 
 
 ## Configuration and Architechture
 
 ![architechture](img/arsitektur.png)
 
-There are 5 nodes available on this setup. Here's the node configuration:
+There are 5 nodes available on this setup. Here's the IP configuration of the nodes:
 
 ```
 192.168.16.69 -> hosting_noredis
@@ -27,5 +30,17 @@ There are 5 nodes available on this setup. Here's the node configuration:
 192.168.16.73 -> redis_node_3 (slave-2)
 ```
 
+All nodes use `bento/ubuntu18.04` image with 512 MB of RAM.
+
 ### Redis Cluster
 
+For the redis cluster, I'm using the `redis-server` and `redis-sentinel`
+
+
+### Web Server
+
+I'm using LEMP stack on this implementation instead LAMP because I'm more familiar with nginx instead apache2. 
+
+## Load Testing
+
+## Failover Testing
